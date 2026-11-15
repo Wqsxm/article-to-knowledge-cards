@@ -1,0 +1,30 @@
+{
+  "name": "local-imagegen",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "title": { "zh": "生图", "en": "Image gen" },
+    "icon": "generate-image",
+    "wants": ["draft"],
+    "contributes": {
+      "composer.actions": [
+        {
+          "id": "gen",
+          "label": { "zh": "生图", "en": "Draw" },
+          "icon": "generate-image"
+        }
+      ]
+    }
+  }
+}
